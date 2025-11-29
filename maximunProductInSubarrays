@@ -1,0 +1,13 @@
+class Solution:
+    def maxProduct(self, nums: List[int]) -> int:
+        maxval = float('-inf')
+        prf , suf = 1,1
+        for i in range(len(nums)):
+            prf *= nums[i]
+            suf *= nums[len(nums)-1-i]
+            maxval = max(maxval,prf,suf)
+            if ( prf ==0):
+                prf =1
+            if(suf == 0):
+                suf =1
+        return maxval
