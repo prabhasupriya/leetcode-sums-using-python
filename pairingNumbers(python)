@@ -1,0 +1,19 @@
+n = int(input())
+arr = list(map(int, input().split()))
+
+result = []
+
+i = 0
+j = n - 1
+
+while i <= j:
+    if i == j:        # Middle element in an odd-length list
+        result.append(arr[i])
+        result.append(0)
+    else:
+        result.append(arr[i])
+        result.append(arr[j])
+    i += 1
+    j -= 1
+
+print(*result)
