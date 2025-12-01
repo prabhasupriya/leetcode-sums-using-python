@@ -1,0 +1,17 @@
+a = int(input())
+arr = list(map(int, input().split()))
+
+d = {}
+order = []
+
+for x in arr:
+    d[x] = d.get(x, 0) + 1
+    if x not in order:
+        order.append(x)
+
+result = []
+for x in order:
+    result.append(str(x))
+    result.append(str(d[x]))
+
+print(" ".join(result))
