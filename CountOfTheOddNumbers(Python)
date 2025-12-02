@@ -1,0 +1,10 @@
+a = int(input())
+arr = list(map(int, input().split()))
+
+result = []
+for ch in arr:
+    if ch % 2 != 0:
+        if ch not in result:
+            result.append(ch)
+
+print(len(result))
