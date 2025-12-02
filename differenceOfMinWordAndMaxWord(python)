@@ -1,0 +1,14 @@
+a = input().strip()
+
+word = a.split()
+
+minword = []
+maxword =[]
+
+for ch in word:
+    minword.append(ord(min(ch)))
+    maxword.append(ord(max(ch)))
+rs = sum(minword)
+rm =sum(maxword)
+
+print(rm-rs)
