@@ -1,0 +1,18 @@
+a = int(input())
+
+arr = list(map(int ,input().split()))
+
+i =0
+j=len(arr)-1
+r = []
+while(i <= j):
+    if(i==j):
+        r.append(arr[i])
+        r.append(0)
+    else:
+        r.append(arr[i])
+        r.append(arr[j])
+    i +=1
+    j -= 1
+
+print(" ".join(map(str,r)))
