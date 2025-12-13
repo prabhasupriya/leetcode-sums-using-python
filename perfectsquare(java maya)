@@ -1,0 +1,27 @@
+import java.util.Scanner;
+public class Nameclass{
+public static void main(String[] args){
+
+
+Scanner sc = new Scanner(System.in);
+int a = sc.nextInt();
+int count;
+while(a >0){
+int b = sc.nextInt();
+count =0;
+for(int i =2;i<b;i++){
+if(i*i == b ){
+count +=1;
+
+System.out.println("True");
+
+break;
+}
+}
+if(count == 0){
+System.out.println("False");
+}
+
+}
+}
+
