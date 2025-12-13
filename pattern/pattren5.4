@@ -1,0 +1,95 @@
+#include<stdio.h>
+int main(){
+int a ;
+
+scanf("%d",&a);
+
+for(int i =0;i<a;i++){
+
+int num =1;
+
+for(int j = 0; j<a-i;j++)
+{
+printf("%d",num);
+num =num+1;
+}
+for(int k =0;k<i;k++){
+printf("*");
+}
+printf("\n");
+}
+
+}
+}
+
+==================================================================
+Description
+Basic Pattern 5.4
+Program Description
+You will be given a number N.
+Print the following Pattern.
+Input Format
+Only line of input contains an integer N.
+
+
+
+Output Format
+Print appropriate pattern.
+
+Constraints
+1<=N<=25
+
+Input-1
+9
+
+
+Output-1
+123456789
+
+12345678*
+
+1234567**
+
+123456***
+
+12345**
+
+1234***
+
+123****
+
+12***
+
+1****
+
+
+Input-2
+5
+
+
+Output-2
+12345
+1234*
+123**
+12***
+1** 
+
+
+Input-3
+5
+
+
+Output-3
+1234567
+
+123456*
+
+12345**
+
+1234***
+
+123**
+
+12***
+
+**
