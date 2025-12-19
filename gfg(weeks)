@@ -1,0 +1,39 @@
+// User function Template for Java
+class Solution {
+    public static String utility(int number) {
+String m;
+        // write your code here
+        switch(number){
+            case 1 :
+                m= "One";
+                break;
+            case 2 :
+                m= "Two";
+                break;
+            case 3:
+                m ="Three";
+                break;
+            case 4:
+                m="Four";
+                break;
+            case 5:
+                m="Five";
+                break;
+            case 6:
+                m="Six";
+                break;
+            case 7:
+                m="Seven";
+                break;
+            case 8:
+                m="Eight";
+                break;
+            case 9:
+                m="Nine";
+                break;
+            default:
+            m="Unknown";
+        }
+        return  m;
+    }
+}
