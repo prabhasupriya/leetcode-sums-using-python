@@ -1,0 +1,12 @@
+a, b = map(int,input().split())
+evensum = 0
+oddsum = 0
+for i in range(a):
+    row = list(map(int, input().split()))
+    for x in row:
+        if x % 2 == 0:
+            evensum += x
+        else:
+            oddsum += x
+
+print(evensum, oddsum)
