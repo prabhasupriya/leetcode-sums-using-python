@@ -1,0 +1,11 @@
+a,b = map(int,input().split())
+even=0
+odd =0
+for i in range(a):
+    row = list(map(int,input().split()))
+    for x in row:
+        if (i %2==0):
+            even += x
+        else:
+            odd +=x
+print(even, odd)
