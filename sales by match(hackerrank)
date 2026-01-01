@@ -1,0 +1,9 @@
+def sockMerchant(n, ar):
+    # Write your code here
+    d={}
+    s=0
+    for i in ar:
+        d[i] = d.get(i,0)+1
+    for ky,value in d.items():
+        s += value//2;
+    return s 
