@@ -1,0 +1,8 @@
+class Solution {
+  public:
+    int binaryToDecimal(string &b) {
+        // Code here.
+        int decimal = stoi(b,nullptr,2);
+        return decimal;
+    }
+};
