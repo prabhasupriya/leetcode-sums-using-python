@@ -1,0 +1,5 @@
+def pageCount(n, p):
+    # Write your code here
+    front = p//2
+    bk = (n//2)-(p//2)
+    return min(int(front) , bk)
