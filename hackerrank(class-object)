@@ -1,0 +1,22 @@
+class Student {
+private:
+    vector<int> scores;
+
+public:
+    // Read 5 exam scores
+    void input() {
+        scores.resize(5);
+        for (int i = 0; i < 5; i++) {
+            cin >> scores[i];
+        }
+    }
+
+    // Return total score
+    int calculateTotalScore() {
+        int total = 0;
+        for (int score : scores) {
+            total += score;
+        }
+        return total;
+    }
+};
