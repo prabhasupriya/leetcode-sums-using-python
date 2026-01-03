@@ -1,0 +1,22 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	// your code goes here
+	int a;
+	cin >> a;
+	while(a >0){
+	    int b,c,d;
+	    cin >>b>>c>>d;
+	    double n = (b+c);
+	    if(n > 2*d){
+	        cout<<"YES" << endl;
+	    }
+	    else{
+	        cout<<"NO" << endl;
+	    }
+	    a--;
+	}
+
+}
+codechef(avg)
