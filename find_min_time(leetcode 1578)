@@ -1,0 +1,27 @@
+class Solution {
+public:
+    int minCost(string colors, vector<int>& neededTime) {
+        int totalTime = 0;
+        int maxTime = 0;
+
+        for (int i = 0; i < colors.size(); i++) {
+            // If same color as previous, we are in a group
+            if (i > 0 && colors[i] != colors[i - 1]) {
+                maxTime = 0; // reset for new color group
+            }
+
+            // Add removal time
+            totalTime += neededTime[i];
+
+            // Track max time in current group
+            maxTime = max(maxTime, neededTime[i]);
+
+            // Subtract maxTime once per group (keep one balloon)
+            if (i == colors.size() - 1 || colors[i] != colors[i + 1]) {
+                totalTime -= maxTime;
+            }
+        }
+
+        return totalTime;
+    }
+};
