@@ -1,0 +1,14 @@
+
+n, m = map(int, input().split())
+# Read the array
+arr = list(map(int, input().split()))
+found =0;
+for i in range(0,n):
+    if(arr[i] == m):
+        print("YES");
+        found =1;
+        break
+if(found ==0):
+    print("NO");
+
+    
