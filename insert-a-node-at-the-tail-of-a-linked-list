@@ -1,0 +1,20 @@
+SinglyLinkedListNode* insertNodeAtTail(SinglyLinkedListNode* head, int data) {
+    // Create new node
+    SinglyLinkedListNode* newNode = new SinglyLinkedListNode(data);
+
+    // If list is empty, new node becomes head
+    if (head == nullptr) {
+        return newNode;
+    }
+
+    // Traverse to the last node
+    SinglyLinkedListNode* temp = head;
+    while (temp->next != nullptr) {
+        temp = temp->next;
+    }
+
+    // Insert at tail
+    temp->next = newNode;
+
+    return head;
+}
