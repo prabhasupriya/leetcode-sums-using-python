@@ -1,0 +1,4 @@
+st = input()
+st = st.lower().replace(" ","")
+disset = set(st)
+print(len(disset))
