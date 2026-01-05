@@ -1,0 +1,19 @@
+s = input()
+
+# Step 1: lowercase and remove spaces
+s = s.lower().replace(" ", "")
+
+# Step 2: count character frequencies
+freq = {}
+for ch in s:
+    freq[ch] = freq.get(ch, 0) + 1
+
+# Step 3: collect characters that appear exactly once
+unique_chars = []
+for ch in freq:
+    if freq[ch] == 1:
+        unique_chars.append(ch)
+
+# Step 4: sort and print
+unique_chars.sort()
+print("".join(unique_chars))
