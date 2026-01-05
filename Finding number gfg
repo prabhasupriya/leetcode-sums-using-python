@@ -1,0 +1,15 @@
+class Solution {
+  public:
+    int search(vector<int>& arr, int x) {
+        // code here
+       // sort(arr.begin(), arr.end());
+        int low =0;
+        int high = arr.size();
+        for(int i=0;i<=high;i++){
+            if(arr[i] == x){
+                return i;
+            }
+        }
+        return -1;
+    }
+};
