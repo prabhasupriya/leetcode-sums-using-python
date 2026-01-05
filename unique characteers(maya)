@@ -1,0 +1,16 @@
+s = input()
+
+# convert to lowercase
+s = s.lower()
+
+# remove spaces
+s = s.replace(" ", "")
+
+# get distinct characters using set
+distinct_chars = set(s)
+
+# sort characters
+sorted_chars = sorted(distinct_chars)
+
+# print result as a string
+print("".join(sorted_chars))
