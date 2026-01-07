@@ -1,0 +1,23 @@
+class Solution {
+  public:
+    vector<int> findTwoElement(vector<int>& arr) {
+        // code here
+        vector<int> answer;
+        long long s =0;
+        int n=-1;
+        unordered_map<int,int> freq;
+        for(int a=0;a < arr.size() ; a++){
+            freq[arr[a]]++;
+            if(freq[arr[a]] >1){
+                n = arr[a];
+            }
+             s = s +arr[a];
+        }
+        long long b = arr.size();
+        long long h = b*(b+1)/2;
+        long long m = s-n;
+        answer.push_back(n);
+        answer.push_back((h-m));
+        return answer;
+    }
+};
