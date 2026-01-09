@@ -1,0 +1,52 @@
+class Solution {
+    public boolean isNumber(String s) {
+        int len = s.length();
+        boolean seenExponent = false;
+        boolean seenDecimal = false;
+        boolean seenNumber = false;
+
+        for (int i = 0; i < len; i++) {
+            char c = s.charAt(i);
+
+            if (!isValidChar(c)) return false;
+
+            if (Character.isDigit(c)) {
+                seenNumber = true;
+                continue;
+            }
+
+            // Sign check
+            if (c == '+' || c == '-') {
+                // Sign must be at start or right after e/E, and not last
+                if (i == len - 1 || (i > 0 && s.charAt(i - 1) != 'e' && s.charAt(i - 1) != 'E')) {
+                    return false;
+                }
+                continue;
+            }
+
+            // Exponent check
+            if (c == 'e' || c == 'E') {
+                if (i == 0 || i == len - 1 || !seenNumber || seenExponent) {
+                    return false;
+                }
+                seenExponent = true;
+                continue;
+            }
+
+            // Decimal check
+            if (c == '.') {
+                if (seenDecimal || seenExponent || len == 1 ||
+                    (i == len - 1 && i > 0 && !Character.isDigit(s.charAt(i - 1)))) {
+                    return false;
+                }
+                seenDecimal = true;
+            }
+        }
+
+        return true;
+    }
+
+    private boolean isValidChar(char c) {
+        return Character.isDigit(c) || c == '-' || c == '+' || c == '.' || c == 'e' || c == 'E';
+    }
+}
