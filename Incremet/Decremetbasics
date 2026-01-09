@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    // Write C++ code here
+    int x=0;
+    std::cout << "pre derement " <<" " << x--;
+    cout <<"valuse" <<" "<< x;
+    cout<<" pre increamet " << ++x;
+    cout<<"value " << x;
+    cout<<"post increment "<<x++ <<"value " << x;
+
+    return 0;
+}
