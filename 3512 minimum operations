@@ -1,0 +1,15 @@
+class Solution {
+public:
+    int minOperations(vector<int>& nums, int k) {
+        int su =0;
+        int c=0;
+        for(int i=0;i<nums.size();i++){
+            su+= nums[i];
+        }
+        while(su %k !=0){
+            c++;
+            su--;
+        }
+        return c;
+    }
+};
