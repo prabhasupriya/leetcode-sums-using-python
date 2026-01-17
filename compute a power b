@@ -1,0 +1,15 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */   
+    long long a;
+    int b;
+    cin >> a>> b;
+    long long result =1;
+    for(int i=0;i<b;i++){
+        result *= a;
+    }
+    cout << result << endl;
+    return 0;
+}
