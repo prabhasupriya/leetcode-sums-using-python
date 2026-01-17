@@ -1,0 +1,22 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */ 
+    int a;
+    cin >> a;
+    int arr[a];
+    unordered_map<int ,int> freq;
+    for(int i=0;i<a;i++){
+        cin >> arr[i];
+        freq[arr[i]]++;
+    } 
+    int pairs=0;
+    for(auto it : freq){
+        pairs += (it.second)/2;
+    }
+    cout << pairs;
+    
+    
+    return 0;
+}
