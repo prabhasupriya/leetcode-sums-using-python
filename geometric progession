@@ -1,0 +1,11 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */   
+    int a,r,n;
+    cin >>a>> r>>n;
+    int gp = a*pow(r ,n-1);
+    cout << gp << endl;
+    return 0;
+}
