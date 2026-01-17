@@ -1,0 +1,24 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */ 
+    int a, key;
+    int ans =-1;
+    cin >> a;
+    cin >> key;
+    for(int i=0;i<a ; i++){
+        int x;
+        cin >> x;
+        if(x == key){
+ans  =i;
+        }
+    }  
+    if(ans != -1){
+        cout << ans;
+    }
+    else{
+        cout << ans;
+    }
+    return 0;
+}
