@@ -1,0 +1,43 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */   
+    int n,m;
+    cin >> n>>m;
+    vector<vector<int>> matrix(n, vector<int>(m));
+
+    for(int i=0;i<n;i++){
+        for(int j=0;j<m;j++){
+            cin >> matrix[i][j];
+        }
+    }
+    //vectors to mark rows and colums to 0
+    vector<int> zerorow(n,0);
+    vector<int> zerocol(m,0);
+
+    for(int i=0;i<n;i++){
+        for(int j =0; j < m;j++){
+            if(matrix[i][j] == 0){
+                zerorow[i]= 1;
+                zerocol[j]=1;
+            }
+        }
+    }
+
+    for(int i=0;i<n;i++){
+        for(int j =0;j<m;j++){
+            if(zerorow[i] || zerocol[j]){
+                matrix[i][j] =0;
+            }
+        }
+    }
+
+    for(int i=0;i<n;i++){
+for(int j =0;j<m;j++){
+    cout << matrix[i][j] << " ";
+}
+cout << endl;
+    }
+    return 0;
+}
