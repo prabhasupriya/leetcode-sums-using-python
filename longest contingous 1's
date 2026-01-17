@@ -1,0 +1,25 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */ 
+    int a;
+    cin >> a;
+    int arr[a];
+    int currentcount=0;
+    int maxcount =0;
+    for(int i=0;i<a;i++){
+        cin >> arr[i];
+        if(arr[i] == 1){
+            currentcount =currentcount + 1;
+            maxcount = max(maxcount , currentcount);
+        }
+        else{
+            currentcount=0;
+        }
+
+    }  
+    cout << maxcount;
+
+    return 0;
+}
