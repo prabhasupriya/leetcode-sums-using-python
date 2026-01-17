@@ -1,0 +1,11 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */   
+    long long a,b;
+    cin >> a >> b;
+    long long area = a*b;
+    cout << area << endl;
+    return 0;
+}
