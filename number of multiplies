@@ -1,0 +1,16 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */   
+    
+    long long  n;
+    cin >> n;
+    long long count3 = n/3;
+    long long count5 = n/5;
+    long long count15 = n/15;
+    long long total = count3 + count5 - count15;
+    cout << total << endl;
+    
+    return 0;
+}
