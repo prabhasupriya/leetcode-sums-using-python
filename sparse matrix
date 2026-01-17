@@ -1,0 +1,27 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */   
+   int n,m;
+   cin >> n>> m;
+   //vector<vector<int >> ar(n , vector<int>(m));
+int zerocount=0;
+   for(int i=0;i<n;i++){
+    for(int j=0;j<m;j++){
+        int x;
+        cin >> x;
+if(x == 0){
+    zerocount ++;
+}
+        //cin >> ar[i][j]
+    }
+   }
+   if(zerocount > ((n*m)/2)){
+    cout << "Yes";
+   }
+   else{
+    cout <<"No";
+   }
+    return 0;
+}
