@@ -1,0 +1,8 @@
+class Solution {
+  public:
+    void utility() {
+        string input ;
+        getline(cin,input);
+        cout<<input<<endl;
+    }
+};
