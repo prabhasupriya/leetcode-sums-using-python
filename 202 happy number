@@ -1,0 +1,23 @@
+class Solution {
+public:
+    bool isHappy(int n) {
+        unordered_set<int> seen;
+        while(n != 1 && seen.find(n) == seen.end()){
+            seen.insert(n);
+            n = sumofsqure(n);
+        }
+        return n==1;
+    }
+        private:
+    int sumofsqure(int n){
+        int d;
+        int s=0;
+        while(n>0){
+            d = n%10;
+            s += d*d;
+            n =n/10;
+        }
+        return s;
+    
+    }
+};
