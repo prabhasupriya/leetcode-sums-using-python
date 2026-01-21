@@ -1,0 +1,11 @@
+int findPattern(string &s, string &p) {
+    // code here
+    int m = s.find(p);
+    if(m == string::npos)
+    {
+       return   -1;
+    }
+    return m;
+    
+
+}
