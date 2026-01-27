@@ -1,0 +1,16 @@
+// User function Template for C++
+
+int LCM(int a, int b) {
+if(a>b){
+    int temp =a;
+    a = b;
+    b = temp;
+}
+    // write your code here
+    for(int i=b;b<=a*b;i=i+b){
+        if(i%a ==0){
+            return i;
+        }
+    }
+    // return LCM of a and b
+}
