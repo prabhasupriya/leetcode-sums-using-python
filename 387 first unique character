@@ -1,0 +1,19 @@
+class Solution {
+public:
+    int firstUniqChar(string s) {
+        int ans=-1;
+        vector<int> alpha(26,0);
+        for(int i=0;i<s.size();i++){
+            int v = s[i]-'a';
+            alpha[v]++;
+        }
+    
+            for(int j=0;j<s.size();j++){
+            if(alpha[s[j]-'a'] == 1){
+                ans = j;
+                break;
+            }
+            }
+        return ans;
+    }
+};
