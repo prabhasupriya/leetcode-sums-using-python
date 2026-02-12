@@ -1,0 +1,18 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	// your code goes here
+	int a,b,c,d;
+	cin >>a>>b>>c>>d;
+	if((abs(a-b)) < (abs(c-d))){
+	    cout<<"First";
+	}
+	else if((abs(a-b)) > abs(c-d)){
+	    cout <<"Second";
+	}
+	else{
+	    cout <<"Both";
+	}
+
+}
