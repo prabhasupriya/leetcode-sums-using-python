@@ -1,0 +1,15 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	// your code goes here
+	int runs ;
+	cin >> runs;
+	if(runs>= 7){
+	    cout <<"THALA";
+	}
+	else{
+	    cout <<"BOOM";
+	}
+
+}
