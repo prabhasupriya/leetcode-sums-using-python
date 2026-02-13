@@ -1,0 +1,13 @@
+class Solution {
+  public:
+    int binary_to_decimal(int B) {
+        // Code here
+        string k = to_string(B);
+        int l = k.size();
+        int d =0;
+for(int i=0;i<l;i++){
+    d = d +(k[i]-'0')*pow(2,l-1-i);
+}
+return d;
+    }
+};
