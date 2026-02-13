@@ -1,0 +1,13 @@
+class Solution {
+  public:
+    // Function to swap A and B
+    // using pointers
+    void swap(int *A, int *B) {
+*A= *A+*B;
+*B = *A-*B;
+*A = *A-*B;
+
+        // Your code here
+        
+    }
+};
