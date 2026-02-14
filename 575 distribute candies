@@ -1,0 +1,20 @@
+class Solution {
+public:
+    int distributeCandies(vector<int>& candyType) {
+        int l = candyType.size();
+        int ans =l/2;
+        int count =0;        unordered_set<int> unique;
+        for(int i=0;i<l;i++){
+            if(unique.find(candyType[i]) == unique.end()){
+         count =count +1;      unique.insert(candyType[i]);
+                
+            }
+        }
+        if(count >= ans){
+            return ans;
+        }
+        else{
+            return  count;
+        }
+    }
+};
