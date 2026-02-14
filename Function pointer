@@ -1,0 +1,20 @@
+
+int sub(int a, int b) {
+    // code here
+    return a-b;
+}
+
+int add(int a, int b) {
+    
+    // code here
+    return a+b;
+}
+
+void compute(int a, int b, int (*fun)(int,int)) {
+
+
+int* d=  add(a,b);
+printf("%d\n",fun(a,b));
+    // print result as per function pointer
+    // code here
+}
