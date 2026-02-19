@@ -1,0 +1,17 @@
+class Solution {
+public:
+void dfs(vector<vector<int>>& img , int i,int j, int newColor , int og){
+    if(i<0 || j<0 || i>=img.size() || j>=img[0].size() || img[i][j] != og || img[i][j] == newColor) 
+    return ;
+img[i][j] = newColor;
+
+    dfs(img,i-1,j,newColor,og);
+    dfs(img , i,j+1 , newColor ,og);
+    dfs(img , i+1 , j ,newColor , og);
+    dfs(img ,i, j-1 , newColor ,og);
+}
+    vector<vector<int>> floodFill(vector<vector<int>>& image, int sr, int sc, int color) {
+        dfs(image, sr,sc,color , image[sr][sc]);
+        return image;
+    }
+};
