@@ -1,0 +1,10 @@
+def mutate_string(string, position, character):
+    temp_strin=""
+    for i in range(len(string)):
+        if(i != position):
+            temp_strin = temp_strin + string[i];
+        
+        else:
+            temp_strin = temp_strin+ character
+            
+    return temp_strin
