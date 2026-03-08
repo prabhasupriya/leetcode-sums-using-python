@@ -1,0 +1,23 @@
+class Solution {
+public:
+    int minimumIndex(vector<int>& capacity, int itemSize) {
+        int mm = INT_MAX;
+        int m;
+        int found =0;
+        int ans=-1;
+        for(int i=0;i<capacity.size();i++){
+            if(capacity[i] >= itemSize){
+                m= capacity[i];
+                mm = min(mm,m);
+                found =1;
+            }
+            
+        }
+        if(found ==0){
+            return -1;
+        }
+        auto it =find(capacity.begin(),capacity.end(),mm);
+        ans= it-capacity.begin();
+       return ans; 
+    }
+};©leetcode
